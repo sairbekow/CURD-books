@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CURD Books</title>
+</head>
+<body>
+<div class="register form-block center">
+  <p class="register__title title">Регистрация</p>
+  <form class="register__form form">
+    <label class="register__firstname-field ">
+      <span class="attention-text not-required">*необязательное поле</span>
+      <input data-property="firstName" type="text" class="register__input input" placeholder="Ваше имя">
+    </label>
+    <label class="register__age-field ">
+      <span class="attention-text not-required">*необязательное поле</span>
+      <input data-property="age" type="number" class="register__input input" placeholder="Сколько вам лет">
+    </label>
+    <label class="register__username-field register__label">
+      <span class="attention-text">*обязательно</span>
+      <input data-property="username" type="text" class="register__input input" placeholder="Имя пользователя">
+    </label>
+    <label class="register__password-field register__label">
+      <span class="attention-text">*обязательно</span>
+      <input data-property="password" type="password" class="register__input input" placeholder="Пароль">
+    </label>
+    <label class="register__repeat-password-field register__label">
+      <span class="attention-text">*обязательно</span>
+      <input data-variable="repeatPassword" type="password" class="input" placeholder="Повторите пароль">
+    </label>
+
+    <button type="submit" class="register__btn button">Войти</button>
+  </form>
+
+  <a href="./index.html" class="login__link">у вас уже есть аккаунт?</a>
+</div>
+<div class="spinner">
+  <div class="lds-dual-ring center"></div>
+</div>
+</body>
+</html>

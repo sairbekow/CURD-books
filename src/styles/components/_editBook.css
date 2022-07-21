@@ -1,0 +1,51 @@
+.edit-book__head {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   margin-bottom: 20px;
+}
+
+.edit-book__delete-btn {
+   padding: 5px 10px;
+   position: relative;
+   background-color: #EDEDED;
+   border-radius: 10px;
+}
+.edit-book__delete-btn::before {
+   content: '';
+   width: 20px;
+   height: 20px;
+   top: 10px;
+   left: 10px;
+   position: absolute;
+   background-image: url(../../images/delete.svg);
+}
+
+.edit-book__form {
+   gap: 15px;
+}
+
+#edit-book__favorite {
+   display: none;
+}
+
+.edit-book__favorite-btn {
+   display: flex;
+   align-items: center;
+   background-color: #ededed;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+
+#edit-book__favorite:checked + label svg path {
+   fill: #EB434D;
+}
+
+
+.edit-book__favorite-btn span {
+   margin: 0 auto;
+   padding-right: 35px;
+}
+
+

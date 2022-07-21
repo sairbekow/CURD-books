@@ -1,0 +1,88 @@
+.books {
+   margin-top: 75px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.user {
+   justify-content: end;
+   display: flex;
+   gap: 15px
+}
+
+.user button {
+   color: #2d5ec2;
+   text-decoration: underline;
+   margin-left: 30px;
+}
+
+.books__list {
+   width: 800px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+   flex-wrap: wrap;
+}
+
+.books__title {
+   margin-bottom: 40px;
+   text-align: center;
+   font-size: 44px;
+   line-height: 66px;
+}
+
+.books__add-btn {
+   margin-top: 40px;
+   width: 300px;
+}
+
+.book {
+   max-width: 440px;
+   min-height: 188px;
+   display: flex;
+   justify-content: space-between;
+   padding: 28px 31px 31px 31px;
+   border-radius: 10px;
+   background-color: #fff;
+}
+
+.book__right {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.book__title {
+   width: 257px;
+   margin-bottom: 14px;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 30px;
+}
+
+@media (max-width: 800px) {
+   .books__list {
+      width: unset;
+   }
+}
+
+@media (max-width: 420px) {
+   .book__title {
+      width: 100%;
+   }
+
+   .book {
+      width: 100%;
+   }
+
+   .book__right {
+      padding-left: 15px;
+   }
+
+   .books__add-btn {
+      width: 100%;
+   }
+}
+

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CRUD Books</title>
+</head>
+<body>
+<div class="add-book form-block center">
+  <div class="add-book__head">
+    <a href="./bookList.html" class="go-back">
+      <img src="./images/back.svg" alt="arrow left">
+    </a>
+    <p class="add-book__title title">Добавить книгу</p>
+  </div>
+  <form class="add-book__form form">
+    <label class="add-book__label add-book__input-title">
+      <span class="attention-text">это поле не должно быть пустым*</span>
+      <input type="text" class="add-book__input input" placeholder="Название">
+    </label>
+    <label class="add-book__label add-book__input-author">
+      <span class="attention-text">это поле не должно быть пустым*</span>
+      <input type="text" class="add-book__input input" placeholder="Автор">
+    </label>
+    <label class="add-book__label add-book__input-publish-year">
+      <span class="attention-text not-required">необязательное поле*</span>
+      <input type="number" class="add-book__input input" placeholder="Год публикации">
+    </label>
+    <label class="add-book__label add-book__input-publish-house">
+      <span class="attention-text not-required">необязательное поле*</span>
+      <input type="text" class="add-book__input input" placeholder="Редакция">
+    </label>
+    <label class="add-book__label add-book__input-pages">
+      <span class="attention-text not-required">необязательное поле*</span>
+      <input type="number" class="add-book__input input" placeholder="Колличество страниц">
+    </label>
+    <label class="add-book__label add-book__input-genres">
+      <span class="attention-text not-required">необязательное поле*</span>
+      <input type="text" class="add-book__input input" placeholder="жанры">
+    </label>
+    <label class="add-book__label add-book__input-original-language">
+      <span class="attention-text not-required">необязательное поле*</span>
+      <input type="text" class="add-book__input input" placeholder="Оригинальный язык">
+    </label>
+    <button type="submit" class="add-book__btn button">Сохранить</button>
+  </form>
+</div>
+<div class="spinner">
+  <div class="lds-dual-ring center"></div>
+</div>
+</body>
+</html>

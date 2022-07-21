@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+  <div class="user">
+    <img src="images/avatar.svg" alt="avatar">
+    <p class="user__name">Username</p>
+    <button class="logout">Выход</button>
+  </div>
+  <div class="book-info">
+      <div class="book-info__head">
+        <h2 class="book-info__title">Информация о книге</h2>
+      </div>
+      <div class="book-info__content">
+        <a href="./bookList.html" class="book-info__back-link go-back">
+          <img src="./images/back.svg" alt="arrow left">
+        </a>
+        <h3 class="book-info__content-title">Гарри Поттер и Философский камень</h3>
+        <p class="book-info__author">Джоан Роулинг</p>
+        <ul class="book-info__list">
+          <li class="book-info__item">
+            <p class="book-info__publish-house">Издательтсво: <span>Росмэн</span></p>
+          </li>
+          <li class="book-info__item">
+            <p class="book-info__original-language">Язык оригинала: <span>Английский</span></p>
+          </li>
+          <li class="book-info__item">
+            <p class="book-info__genres">Жанры: <span>Приключения, драмма</span></p>
+          </li>
+          <li class="book-info__item">
+            <p class="book-info__publish-year">Год издания: <span>1997</span></p>
+          </li>
+          <li class="book-info__item">
+            <p class="book-info__page-number">Кол-во страниц: <span>399</span></p>
+          </li>
+
+        </ul>
+        <div class="book-info__content-bottom">
+          <button type="button" class="book-info__btn button">Редактировать</button>
+          <button class="book-info__delete-btn book__btn book__delete-btn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="12" fill="#EDEDED"/>
+              <path
+                  d="M29.1667 13.6H25.8333V11.6C25.8333 10.7175 25.0859 10 24.1667 10H15.8333C14.9141 10 14.1667 10.7175 14.1667 11.6V13.6H10.8333C10.3724 13.6 10 13.9575 10 14.4V15.2C10 15.31 10.0937 15.4 10.2083 15.4H11.7812L12.4245 28.475C12.4661 29.3275 13.2005 30 14.0885 30H25.9115C26.8021 30 27.5339 29.33 27.5755 28.475L28.2187 15.4H29.7917C29.9062 15.4 30 15.31 30 15.2V14.4C30 13.9575 29.6276 13.6 29.1667 13.6ZM23.9583 13.6H16.0417V11.8H23.9583V13.6Z"
+                  fill="#B1B1B1"/>
+            </svg>
+          </button>
+          <button class="book-info__favorite-btn book__btn book__favorite-btn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="12" fill="#EDEDED"/>
+              <path
+                  d="M29.3762 13.5401C28.5386 11.8252 26.1258 10.4221 23.3191 11.239C21.9779 11.6255 20.8078 12.4543 19.9999 13.59C19.1919 12.4543 18.0218 11.6255 16.6806 11.239C13.8677 10.4346 11.4611 11.8252 10.6235 13.5401C9.44831 15.9409 9.93588 18.6411 12.0737 21.5658C13.7489 23.8544 16.143 26.1742 19.6186 28.8681C19.7284 28.9536 19.8637 29 20.003 29C20.1423 29 20.2776 28.9536 20.3874 28.8681C23.8567 26.1804 26.257 23.8793 27.9323 21.5658C30.0638 18.6411 30.5514 15.9409 29.3762 13.5401Z"
+                  fill="#B1B1B1"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="spinner">
+  <div class="lds-dual-ring center"></div>
+</div>
+</body>
+</html>

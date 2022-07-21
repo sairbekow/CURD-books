@@ -1,0 +1,10 @@
+.add-book__btn {
+   margin-top: 20px;
+}
+
+.add-book__head {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+}

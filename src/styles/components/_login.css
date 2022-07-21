@@ -1,0 +1,31 @@
+.login__link {
+   display: inline-block;
+   margin-top: 10px;
+   font-size: 18px;
+   color: #2197f5;
+   text-decoration: underline;
+}
+
+.login__btn {
+   margin-top: 20px;
+}
+
+.login__wrong-field {
+   display: none;
+   font-size: 16px;
+   color: #EB434D;
+   margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+   .form-block {
+      width: 85%;
+      padding: 35px;
+   }
+}
+
+@media (max-width: 576px) {
+   .login__link {
+      font-size: 16px;
+   }
+}

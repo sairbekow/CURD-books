@@ -1,0 +1,15 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/*common styles*/
+@import "_global.css";
+@import "_common.css";
+
+/*components*/
+@import "components/_login.css";
+@import "components/_register.css";
+@import "components/_addBook.css";
+@import "components/_editBook.css";
+@import "components/_bookList.css";
+@import "components/_bookInfo.css";
+@import "components/spinner.css";
