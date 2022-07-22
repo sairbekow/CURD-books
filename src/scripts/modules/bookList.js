@@ -86,7 +86,8 @@ class BookList {
     if (confirm('Вы точно хотите удалить эту книгу?')) {
       const book = e.target.closest('.book')
       book.remove()
-      if (!list.length) {
+      console.log(list.children)
+      if (list.children.length === 1) {
         message.style.display = 'inline-block'
       }
 
