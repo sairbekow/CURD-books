@@ -75,6 +75,7 @@ class BookInfo {
       .then(res => {
         this.render(res)
         this.book = res
+        console.log(res)
       })
   }
 }

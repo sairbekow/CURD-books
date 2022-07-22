@@ -68,7 +68,6 @@ class HttpRequests {
   }
 
   put = (url, body) => {
-    console.log(body)
     const putInner = async () => {
       try {
         const response = await fetch(url, {

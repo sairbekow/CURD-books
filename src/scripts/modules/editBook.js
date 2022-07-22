@@ -17,7 +17,6 @@ class EditBook {
 
   onSaveChanges = () => {
     spinner(true)
-    location.assign(`./editBook.html?id=${this.bookId}`)
     location.assign(`./bookList.html`)
   }
 
@@ -36,6 +35,8 @@ class EditBook {
       if (item.value.trim()) {
         if (item.getAttribute('type') === 'number') {
           reqObj[item.dataset.property] = Number(item.value)
+        } else if (item.dataset.property === 'genres') {
+          reqObj[item.dataset.property] = item.value.split(',')
         } else {
           reqObj[item.dataset.property] = item.value
         }
@@ -43,6 +44,8 @@ class EditBook {
     })
 
     reqObj.isFavorite = this.favoriteBtn.checked
+
+    console.log(reqObj)
 
     new HttpRequests().put(`${_API_URL}/books/update/${this.bookId}`, reqObj)
     this.onSaveChanges()
