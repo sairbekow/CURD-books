@@ -62,6 +62,13 @@
    line-height: 30px;
 }
 
+.message-empty {
+   display: none;
+   text-align: center;
+   font-size: 30px;
+   padding: 50px 0;
+}
+
 @media (max-width: 800px) {
    .books__list {
       width: unset;

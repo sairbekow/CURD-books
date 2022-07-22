@@ -44,20 +44,27 @@ class BookList {
   renderBook = () => {
     spinner(true)
     const list = document.querySelector('.books__list')
+    const message = document.querySelector('.message-empty')
     const req = new HttpRequests()
 
     req.get(`${_API_URL}/books`)
       .then(res => {
-        res.forEach(item => {
-          const book = this.createBook(item.name, item.author, item.isFavorite, item.id)
-          list.append(book)
+        if (res.length === 0) {
+          message.style.display = 'inline-block'
           spinner(false)
-        })
+        } else {
+          message.style.display = 'none'
+          res.forEach(item => {
+            const book = this.createBook(item.name, item.author, item.isFavorite, item.id)
+            list.append(book)
+            spinner(false)
+          })
+        }
       })
   }
 
   onClickBook = (e) => {
-    if(!e.target.closest('.book__btn')) {
+    if (!e.target.closest('.book__btn')) {
       const id = e.target.closest('.book').dataset.id
       location.assign(`./bookInfo.html?id=${id}`)
     }
@@ -67,15 +74,21 @@ class BookList {
     const book = e.target.closest('.book')
     let isFavorite = book.classList.contains('favorite')
 
-    new HttpRequests().put(`${_API_URL}/books/update/${book.dataset.id}`, {isFavorite : !isFavorite})
+    new HttpRequests().put(`${_API_URL}/books/update/${book.dataset.id}`, {isFavorite: !isFavorite})
 
     e.target.closest('.book').classList.toggle('favorite')
   }
 
   deleteBook = (e) => {
+    const list = document.querySelector('.books__list')
+    const message = document.querySelector('.message-empty')
+
     if (confirm('Вы точно хотите удалить эту книгу?')) {
       const book = e.target.closest('.book')
       book.remove()
+      if (!list.length) {
+        message.style.display = 'inline-block'
+      }
 
       new HttpRequests().delete(`${_API_URL}/books/delete/${book.dataset.id}`)
     }

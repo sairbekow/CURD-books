@@ -49,9 +49,9 @@ class AddBook {
       this.request.post(`${_API_URL}/books/create`, {
           name: this.title.value,
           author: this.author.value,
-          publishYear: this.publishYear.value,
+          publishYear: Number(this.publishYear.value),
           publishHouse: this.publishHouse.value,
-          pagesNumber: this.pagesNumber.value,
+          pagesNumber: Number(this.pagesNumber.value),
           genres: this.genres.value.split(','),
           originalLanguage: this.originalLanguage.value
         }, true

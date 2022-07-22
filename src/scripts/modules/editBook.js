@@ -33,8 +33,12 @@ class EditBook {
     const reqObj = {}
 
     this.allInputs.forEach(item => {
-      if (item.value.length > 0) {
-        reqObj[item.dataset.property] = item.value
+      if (item.value.trim()) {
+        if (item.getAttribute('type') === 'number') {
+          reqObj[item.dataset.property] = Number(item.value)
+        } else {
+          reqObj[item.dataset.property] = item.value
+        }
       }
     })
 
